@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpotiLite – Player</title>
+  <meta name="theme-color" content="#121212" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css" />
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" onclick="window.location.href='about.html'" style="cursor: pointer;" title="Sobre o Spotilite">
+      <img src="icons/icon-192.png" alt="logo" class="logo" />
+      <span>SpotiLite</span>
+      <a href="about.html"><i class="ri-information-line" style="font-size: 1.2rem;"></i></a>
+    </div>
+    <div class="search">
+      <input id="searchInput" type="search" placeholder="Buscar música, artista..." />
+      <button id="searchBtn" aria-label="Buscar"><i class="ri-search-line"></i></button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="results">
+      <h2>Resultados</h2>
+      <div id="resultsList" class="grid"></div>
+    </section>
+
+    <aside class="queue">
+      <div class="storage">
+        <span>Cache: <strong id="cacheUsage">0 MB</strong> / <span id="cacheLimit">80 MB</span></span>
+        <button id="clearCacheBtn" class="danger"><i class="ri-delete-bin-7-line"></i></button>
+      </div>
+      <h2>Fila</h2>
+      <ul id="queueList"></ul>
+      <h2><i class="ri-play-list-line"></i> Músicas Offline</h2>
+      <div id="cachedList"></div>
+    </aside>
+  </main>
+
+  <footer class="playerbar">
+    <div class="nowplaying" id="nowPlaying" style="cursor: pointer;" title="Abrir em fullscreen">
+      <img id="npCover" src="" alt="" class="cover placeholder" />
+      <div class="meta">
+        <div id="npTitle" class="title">—</div>
+        <div id="npArtist" class="artist">—</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="shuffleBtn" title="Embaralhar"><i class="ri-shuffle-line"></i></button>
+      <button id="prevBtn" title="Anterior"><i class="ri-skip-back-line"></i></button>
+      <button id="playPauseBtn" title="Play/Pause"><i class="ri-play-line"></i></button>
+      <button id="nextBtn" title="Próxima"><i class="ri-skip-forward-line"></i></button>
+      <button id="repeatBtn" title="Repetir"><i class="ri-repeat-line"></i></button>
+      <input id="seek" type="range" min="0" max="100" value="0" step="1" />
+      <span id="timeLabel">0:00 / 0:30</span>
+    </div>
+
+    <div class="volume">
+      <span><i class="ri-volume-up-line"></i></span>
+      <input id="volume" type="range" min="0" max="1" step="0.01" value="1" />
+      <button id="queueToggleBtn" title="Mostrar/Ocultar Fila"><i class="ri-play-list-line"></i></button>
+    </div>
+  </footer>
+
+  <audio id="audio" crossorigin="anonymous"></audio>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(console.error);
+      });
+    }
+  </script>
+</body>
+</html>

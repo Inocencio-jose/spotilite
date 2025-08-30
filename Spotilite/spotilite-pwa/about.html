@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpotiLite – Sobre</title>
+  <meta name="theme-color" content="#121212" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" onclick="window.location.href='about.html'" style="cursor: pointer;" title="Sobre o Spotilite">
+      <img src="icons/icon-192.png" alt="logo" class="logo" />
+      <span>SpotiLite</span>
+    </div>
+    <div class="search">
+      <input id="searchInput" type="search" placeholder="Buscar música, artista..." style="opacity: 0%;" disabled/>
+      <button onclick="window.location.href='index.html'" title="Voltar"><i class="ri-close-fill"></i></button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="head">
+      <div class="info">
+        <h1>Sobre o SpotiLite</h1>
+        <p>SpotiLite é um reprodutor de música moderno e leve, projetado para oferecer uma experiência fluida e acessível. Desenvolvido pela Orion Technologies, nosso objetivo é trazer a música que você ama para qualquer dispositivo, com suporte offline e uma interface intuitiva.</p>
+        <p>Com o SpotiLite, você pode buscar músicas, criar filas de reprodução, e salvar suas faixas favoritas para ouvir sem conexão. Nosso design minimalista e funcional garante que você aproveite sua música sem complicações.</p>
+        <p>O Spotilite foi baseado no amável design e funcionalidades básicas do <b><i>Spotify.</i></b></p>
+        <p>Junte-se a nós para explorar um novo jeito de curtir suas músicas favoritas, onde quer que esteja!</p>
+      </div>
+      <div class="img">
+        <img src="icons/icon-512.png" alt="Ícone do SpotiLite">
+      </div>
+    </div>
+    <div class="head" id="orion">
+      <div class="img">
+        <img src="icons/orion logo.jpg" alt="Logo da Orion Technologies">
+      </div>
+      <div class="info">
+        <h1>Sobre a Orion Technologies</h1>
+        <p>A Orion Technologies é uma empresa inovadora focada em desenvolver soluções tecnológicas acessíveis e de alta qualidade. Fundada com a missão de simplificar a interação com a tecnologia, criamos produtos que unem funcionalidade e design.</p>
+        <p>Nosso time é apaixonado por tecnologia e música, e o SpotiLite é o resultado dessa paixão. Estamos comprometidos em melhorar continuamente, trazendo novas funcionalidades e suporte para nossos usuários.</p>
+        <p>Explore nosso trabalho e conecte-se conosco para saber mais sobre nossos projetos e visão!</p>
+      </div>
+    </div>
+    <div class="head">
+      <div class="info">
+        <h1>Nossa Equipe</h1>
+        <p>Nossa equipe é composta por desenvolvedores, designers e entusiastas da música, trabalhando juntos para criar experiências únicas. Liderados por Inocêncio José, combinamos criatividade e expertise técnica para entregar o melhor do SpotiLite.</p>
+        <p>Cada membro traz uma perspectiva única, garantindo que nosso produto seja inovador e atenda às necessidades dos usuários. Estamos sempre abertos a feedback para tornar o SpotiLite ainda melhor!</p>
+        <p>Conheça mais sobre nosso trabalho e entre em contato para colaborar ou compartilhar ideias.</p>
+      </div>
+      <div class="img">
+        <img src="icons/profile.jpg" alt="Foto da equipe">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <div class="contacts">
+        <h3>Contacte-nos</h3>
+        <ul>
+          <li><a href="https://wa.me/+244972264209" target="_blank"><i class="ri-whatsapp-fill"></i> +244 972 264 209</a></li>
+          <li><a href="https://facebook.com/oriontechnologies" target="_blank"><i class="ri-facebook-circle-fill"></i> Orion Technologies</a></li>
+          <li><a href="https://t.me/oriontechnologies" target="_blank"><i class="ri-telegram-fill"></i> Orion Technologies</a></li>
+          <li><a href="mailto:orion.technologies635@gmail.com"><i class="ri-mail-send-fill"></i> orion.technologies635@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <h3>SpotiLite</h3>
+        <ul>
+          <li><a href="about.html"><i class="ri-information-2-fill"></i> Sobre</a></li>
+          <li><a href="https://api.spotilite.com" target="_blank"><i class="ri-database-2-fill"></i> SpotiLite API</a></li>
+          <li><a href="index.html"><i class="ri-music-fill"></i> Músicas</a></li>
+          <li><a href="mailto:orion.technologies635@gmail.com"><i class="ri-mail-send-fill"></i> orion.technologies635@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <h3>Orion Technologies</h3>
+        <ul>
+          <li><a href="https://github.com/inocencio-jose" target="_blank"><i class="ri-github-fill"></i> Inocêncio José</a></li>
+          <li><a href="https://www.linkedin.com/in/inocêncio-josé-233778346" target="_blank"><i class="ri-linkedin-fill"></i> Inocêncio José</a></li>
+          <li><a href="http://inocenciojose.netlify.app" target="_blank"><i class="ri-attachment-line"></i> Inocêncio José</a></li>
+          <li><a href="mailto:inocenciojose93497@gmail.com"><i class="ri-mail-send-fill"></i> inocenciojose93497@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <p>&copy; 2025 SpotiLite - Orion Technologies - Todos os Direitos Reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(console.error);
+      });
+    }
+    if(window.innerWidth <= 900){
+      const orion = document.getElementById('orion');
+      orion.innerHTML = `
+      <div class="info">
+        <h1>Sobre a Orion Technologies</h1>
+        <p>A Orion Technologies é uma empresa inovadora focada em desenvolver soluções tecnológicas acessíveis e de alta qualidade. Fundada com a missão de simplificar a interação com a tecnologia, criamos produtos que unem funcionalidade e design.</p>
+        <p>Nosso time é apaixonado por tecnologia e música, e o SpotiLite é o resultado dessa paixão. Estamos comprometidos em melhorar continuamente, trazendo novas funcionalidades e suporte para nossos usuários.</p>
+        <p>Explore nosso trabalho e conecte-se conosco para saber mais sobre nossos projetos e visão!</p>
+        </div>
+        <div class="img">
+          <img src="icons/orion logo.jpg" alt="Logo da Orion Technologies">
+        </div>
+        `;
+      }
+  </script>
+</body>
+</html>
